@@ -24,11 +24,6 @@ main {
   margin-top: 80px; 
 }
 
-.carousel-item img {
-  width: auto; 
-  height: auto; 
-  object-fit: cover;
-}
 
 .header {
   grid-area: header;
@@ -125,7 +120,7 @@ main {
   margin: 50px 1px 1px 1px; 
 }
 
-/* Produtos */
+/* Aba de Produtos */
 .FlexContainer {
   display: flex;
   flex-wrap: wrap;
@@ -146,7 +141,7 @@ main {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   padding: 10px;
   text-align: center;
-  margin-top: 5.4rem; 
+  margin-top: 8.4rem; 
 
 }
 
@@ -157,17 +152,17 @@ main {
   
 }
 
-
+/* Estilo base da lista de produtos */
 .product-list {
-  position: absolute; 
-  top: 0; 
-  left: -210px; 
-  width: 210px; 
-  padding: 15px; 
-  background-color: #fff; 
-  border: 1px solid #ccc; 
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-  margin: 13.9rem;
+  position: absolute;
+  top: 0;
+  left: -260px;
+  width: 210px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 16.9rem;
 }
 
 .product-list h3 {
@@ -175,25 +170,24 @@ main {
 }
 
 .product-list ul {
-  list-style-type: none; 
-  padding: 0; 
+  list-style-type: none;
+  padding: 0;
 }
 
 .product-list li {
-  margin-bottom: 1px; 
+  margin-bottom: 1px;
 }
 
 .product-list a {
-  text-decoration: none; 
-  color: #333; 
+  text-decoration: none;
+  color: #333;
 }
 
 .product-list a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
-
-/* Compra de Produto */
+/*Aba Compra de Produto */
 .product-container {
   display: flex;
   flex-direction: column;
@@ -491,13 +485,14 @@ button:hover {
   color: #fff; 
 }
 
-
 form.d-flex {
   display: flex; 
   gap: 0.5rem; 
   align-items: center; 
   margin-top: 0.5rem; 
 }
+
+
 /* Estilo para o carrossel */
 #carouselExample {
   margin-top: 13rem; 
@@ -508,10 +503,14 @@ form.d-flex {
   width: 100%; 
   height: auto; 
 }
+
 /* Media Queries */
 @media (max-width: 600px) {
   .product {
     flex: 1 1 calc(100% - 30px);
+  }
+  #carouselExample {
+    margin-top: 8rem; 
   }
 }
 
@@ -519,20 +518,285 @@ form.d-flex {
   .product {
     flex: 1 1 calc(50% - 30px);
   }
+
+  #carouselExample {
+    margin-top: 10rem; 
+  }
 }
 
 @media (min-width: 769px) {
   .product {
     flex: 1 1 calc(25% - 30px);
   }
-}
 
-
-@media (max-width: 768px) {
- 
-  .col-md-4 {
-      flex: 1 1 100%;
+  #carouselExample {
+    margin-top: 13rem; 
   }
 }
+
+/* Ajustes responsivos para a lista de produtos */
+
+@media (max-width: 1024px) {
+  .FlexContainer {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .product {
+    flex: 1 1 calc(50% - 20px); 
+  }
+
+  .product-list {
+    left: -180px;
+    width: 180px;
+  }
+}
+
+
+/* Para telas menores que 768px (tablets e smartphones maiores) */
+@media (max-width: 768px) {
+  .FlexContainer {
+    width: 100%;
+    margin: 5px auto;
+  }
+
+  .product {
+    flex: 1 1 100%; 
+  }
+
+  .product-list {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0;
+  }
+}
+/* Para telas menores que 1080px */
+@media (max-width: 1080px) {
+  .FlexContainer {
+    width: 90%; 
+    margin: 10px auto; 
+  }
+
+  .product {
+    flex: 1 1 calc(33.333% - 20px); 
+  }
+
+  .product-list {
+    position: relative; 
+    left: 0; 
+    width: 100%; 
+    margin-top: 20px; 
+  }
+}
+
+/* Para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+  .product {
+    padding: 5px;
+  }
+
+  .product img {
+    width: 90%; 
+  }
+
+  .product-list {
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+/* Para telas menores que 915px */
+@media (max-width: 915px) {
+  button {
+    padding: 6px 10px; 
+    font-size: 12px;
+  }
+
+  button a.btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Para telas menores que 813px */
+@media (max-width: 813px) {
+  button {
+    padding: 6px 10px; 
+    font-size: 12px;
+  }
+
+  button a.btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Para telas menores que 760px */
+@media (max-width: 760px) {
+  button {
+    padding: 6px 10px; 
+    font-size: 12px;
+  }
+
+  button a.btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Para telas menores que 800px */
+@media (max-width: 800px) {
+  button {
+    padding: 6px 10px; 
+    font-size: 12px;
+  }
+
+  button a.btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Para telas menores que 854px */
+@media (max-width: 854px) {
+  button {
+    padding: 6px 10px; 
+    font-size: 12px;
+  }
+
+  button a.btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Para telas menores que 812px */
+@media (max-width: 812px) {
+  button {
+    padding: 6px 10px; 
+    font-size: 12px;
+  }
+
+  button a.btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Para telas menores que 896px */
+@media (max-width: 896px) {
+  button {
+    padding: 6px 10px; 
+    font-size: 12px;
+  }
+
+  button a.btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Para telas menores que 844px */
+@media (max-width: 844px) {
+  button {
+    padding: 6px 10px; 
+    font-size: 12px;
+  }
+
+  button a.btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Para telas menores que 926px */
+@media (max-width: 926px) {
+  button {
+    padding: 6px 10px; 
+    font-size: 12px;
+  }
+
+  button a.btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Para telas menores que 667px */
+@media (max-width: 667px) {
+  button {
+    padding: 5px 8px; 
+    font-size: 10px;
+  }
+
+  button a.btn {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+
+  button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
