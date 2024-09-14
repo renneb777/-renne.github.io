@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+        <header class="header">
+            <h1>ItaCeramica - Brasil</h1>
+            <nav class="menu">
+                <ul>
+                    <li> <a href="../index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+                          </svg>
+                        Home
+                    </a></li>
+                    <li><a href="../produtos.html"></a>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bag"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 1a2 2 0 0 1 2 2v1h2.5A1.5 1.5 0 0 1 14 5.5v8A1.5 1.5 0 0 1 12.5 15h-9A1.5 1.5 0 0 1 2 13.5v-8A1.5 1.5 0 0 1 3.5 4H6V3a2 2 0 0 1 2-2zm-2 3h4V3a1 1 0 0 0-2 0v1H6zm-3 1v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5z" />
+                        </svg>
+                        Produtos
+                    </a></li>
+                    <li><a href="../contato.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                          </svg>Contato
+                    </a></li>
+                    <li><a href="../about.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+                            <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2m-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11"/>
+                          </svg>
+                        Sobre
+                    </a></li>                
+                </ul>
+            </nav>        
+        </header>
+        <main class="main">
+            <section class="product-container">
+                <article class="product-item">
+                    <figure class="product-image">
+                        <img src="../img/valencia.webp" alt="Piso Cerâmico Valencia">
+                        <figcaption>Formato: 44 x 44 cm</figcaption>
+                    </figure>
+                    <section class="product-info">
+                        <article class="product-details">
+                            <h2>Piso Cerâmico Valencia - Lef Cerâmica</h2>
+                            <p>Linha : Pedras Código: LF44080 Categoria : Piso Cerâmico Junta Mínima : 5,00 mm Coeficiente de Atrito : ≥ 0,4</p>
+                            <p class="price">R$19,45 <del class="original-price">R$24,90</del></p>
+                            <p class="availability">Em estoque</p>
+                        </article>
+                        <aside class="buy-section">
+                            <label for="quantity">Quantidade:</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1">
+                            <button type="button">Comprar</button>
+                        </aside>
+                    </section>
+                </article>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2024 ItaCeramica. Todos os direitos reservados.</p>
+        </footer>
+</body>
+
+</html>
