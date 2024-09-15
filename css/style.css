@@ -139,7 +139,7 @@ main {
   gap: 10px; 
 }
 
-
+/*Aba de Produto Seleção de compra*/
 .product {
   display: flex;
   flex-direction: column;
@@ -149,14 +149,61 @@ main {
   padding: 10px;
   text-align: center;
   margin-top: 8.4rem;
+  transition: transform 0.3s, box-shadow 0.3s; 
 }
-
+/*
 .product img {
   width: 100%;
   max-width: 100%;
   height: auto;
   
 }
+*/
+.product:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
+}
+.product img {
+  width: calc(100% - 20px); 
+  height: auto; 
+  display: block;
+  border-bottom: 1px solid #f0f0f0; 
+  object-fit: cover;  
+  margin: 10px;  
+}
+
+
+.product-body {
+  padding: 15px;
+}
+
+.product-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-text {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+.product a.btn {
+  background-color: #0099cc;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.product a.btn:hover {
+  background-color: #007bb5;
+}
+
 
 /* Estilo base da lista de produtos */
 .product-list {
@@ -166,8 +213,8 @@ main {
   width: -210px;
   padding: 15px;
   background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /*border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
   margin: 17rem;
 }
 
@@ -191,9 +238,10 @@ main {
 
 .product-list a:hover {
   text-decoration: underline;
+  
 }
 
-/* Aba Compra de Produto */
+/* Aba Compra e quantidade do Produto */
 .product-container {
   display: flex;
   flex-direction: column;
@@ -428,7 +476,7 @@ main {
   margin-bottom: 0;
 }
 
-/* Botão Menu Principal */
+/* Botão da aba seleção de produto */
 button {
   padding: 5px 5px; 
   font-size: 14px;
