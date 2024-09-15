@@ -1,7 +1,7 @@
 /* Layout Principal */
 .layout {
-  width: 100%;
-  max-width: 1366px;
+  width: auto;
+  max-width: auto;
   height: auto;
   display: grid;
   grid-template-areas:
@@ -90,12 +90,14 @@ main {
   display: flex;
   align-items: center;
   gap: 5px;
+
 }
 
 .menu li svg {
-  width: 20px;
-  height: 20px;
+  width: 18px; /* Defina uma largura consistente */
+  height: auto; /* Mantém a proporção correta */
   fill: currentColor;
+  
 }
 
 .menu li:hover {
@@ -127,7 +129,8 @@ main {
   gap: 10px;
   width: 70%; 
   max-width: 1200px; 
-  margin: 12px auto; 
+  margin: auto; 
+  
 }
 
 .products {
@@ -136,13 +139,16 @@ main {
   gap: 10px; 
 }
 
+
 .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 1 1 calc(25% - 20px); 
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   padding: 10px;
   text-align: center;
-  margin-top: 8.4rem; 
-
+  margin-top: 8.4rem;
 }
 
 .product img {
@@ -157,12 +163,12 @@ main {
   position: absolute;
   top: 0;
   left: -260px;
-  width: 210px;
+  width: -210px;
   padding: 15px;
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 16.9rem;
+  margin: 17rem;
 }
 
 .product-list h3 {
@@ -187,85 +193,79 @@ main {
   text-decoration: underline;
 }
 
-/*Aba Compra de Produto */
-/* Estilos padrão para desktop */
+/* Aba Compra de Produto */
 .product-container {
   display: flex;
   flex-direction: column;
-  align-items: left;
   gap: 20px;
   width: 100%;
-  
 }
 
 .product-item {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 50px;
-  margin: auto;
+  padding: 15px; 
+  margin: 20px auto; 
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: #fff;
-  width: 50%;
+  width: 100%;
+  max-width: 1200px; 
 }
 
 .product-image {
   flex: 1;
-  padding-right: 20px;
+  padding: 10px;
 }
 
 .product-image img {
-  width: 300px;
-  height: auto;
+  width: auto;
+  height: 250px; 
+  object-fit: contain; 
+  border-radius: 8px; 
 }
 
 .product-info {
   flex: 2;
   display: flex;
   flex-direction: column;
+  padding-left: 20px; 
+  
 }
 
 .product-details {
   text-align: left;
-  margin-bottom: 20px;
-}
-
-.product-details h2 {
-  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .price {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #e74c3c;
 }
 
 .original-price {
   text-decoration: line-through;
-  margin-left: 10px;
+  margin-left: 5px;
   color: #888;
-}
-
-.availability {
-  margin-top: 10px;
 }
 
 .buy-section {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 5px;
+  margin-top: 10px;
 }
 
 .buy-section input {
-  width: 60px;
+  width: 50px;
   padding: 5px;
   text-align: center;
 }
 
 .buy-section button {
-  padding: 10px 20px;
+  padding: 8px 16px;
   background-color: #0099cc;
   color: white;
   border: none;
@@ -275,10 +275,7 @@ main {
 
 .buy-section button:hover {
   background-color: #098726;
-  transform: translateY(0px);
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
 }
-
 
 /* Container \geral dos cards */
 .container {
@@ -433,7 +430,7 @@ main {
 
 /* Botão Menu Principal */
 button {
-  padding: 8px 12px; 
+  padding: 5px 5px; 
   font-size: 14px;
   color: #fff;
   background-color: #0099cc;
@@ -443,6 +440,7 @@ button {
   cursor: pointer;
   vertical-align: middle; 
   transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: auto;
 }
 button a.btn {
   background-color: #0099cc;
@@ -609,241 +607,65 @@ form.d-flex {
   }
 }
 
-/* Para telas menores que 915px */
-@media (max-width: 915px) {
-  button {
-    padding: 6px 10px; 
-    font-size: 12px;
+@media screen and (max-width: 412px) {
+  .menu ul {
+    flex-direction: row; 
+    justify-content: space-between; 
+    gap: 5px; 
   }
 
-  button a.btn {
-    padding: 8px 16px;
-    font-size: 12px;
+  .menu li {
+    padding: 5px 3px; 
+    font-size: 12px; 
+    width: auto;
   }
 
-  button svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Para telas menores que 813px */
-@media (max-width: 813px) {
-  button {
-    padding: 6px 10px; 
-    font-size: 12px;
+  .menu li svg {
+    width: 15px; 
+    height: auto;
   }
 
-  button a.btn {
-    padding: 8px 16px;
-    font-size: 12px;
+  .menu li a {
+    gap: 3px; 
+    font-size: 18px; 
   }
 
-  button svg {
-    width: 20px;
-    height: 20px;
+  .menu-container {
+    justify-content: flex-start;
   }
 }
 
-/* Para telas menores que 760px */
-@media (max-width: 760px) {
-  button {
-    padding: 6px 10px; 
-    font-size: 12px;
-  }
-
-  button a.btn {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-
-  button svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Para telas menores que 800px */
-@media (max-width: 800px) {
-  button {
-    padding: 6px 10px; 
-    font-size: 12px;
-  }
-
-  button a.btn {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-
-  button svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Para telas menores que 854px */
-@media (max-width: 854px) {
-  button {
-    padding: 6px 10px; 
-    font-size: 12px;
-  }
-
-  button a.btn {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-
-  button svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Para telas menores que 812px */
-@media (max-width: 812px) {
-  button {
-    padding: 6px 10px; 
-    font-size: 12px;
-  }
-
-  button a.btn {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-
-  button svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Para telas menores que 896px */
-@media (max-width: 896px) {
-  button {
-    padding: 6px 10px; 
-    font-size: 12px;
-  }
-
-  button a.btn {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-
-  button svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Para telas menores que 844px */
-@media (max-width: 844px) {
-  button {
-    padding: 6px 10px; 
-    font-size: 12px;
-  }
-
-  button a.btn {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-
-  button svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Para telas menores que 926px */
-@media (max-width: 926px) {
-  button {
-    padding: 6px 10px; 
-    font-size: 12px;
-  }
-
-  button a.btn {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-
-  button svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Para telas menores que 667px */
-@media (max-width: 667px) {
-  button {
-    padding: 5px 8px; 
-    font-size: 10px;
-  }
-
-  button a.btn {
-    padding: 6px 12px;
-    font-size: 10px;
-  }
-
-  button svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* Media Queries para dispositivos móveis */
+/* Media Query para dispositivos móveis */
 @media (max-width: 768px) {
-  .product-container {
-    margin: 20px;
-  }
-
   .product-item {
     flex-direction: column;
+    padding: 10px; /* Reduzido o padding para telas menores */
     width: 100%;
   }
 
   .product-image {
     padding-right: 0;
-    margin-bottom: 20px;
   }
 
   .product-image img {
     width: 100%;
-    height: auto;
-  }
-
-  .product-info {
-    flex: 1;
+    height: 200px; 
+    
   }
 
   .buy-section {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .buy-section input {
     width: 100%;
-    margin-bottom: 10px;
   }
 
+  .buy-section input,
   .buy-section button {
     width: 100%;
-    padding: 15px;
   }
 }
 
-@media (max-width: 480px) {
-  .price {
-    font-size: 1.2em;
-  }
 
-  .buy-section input {
-    width: 80px;
-    padding: 8px;
-  }
-
-  .buy-section button {
-    padding: 12px;
-  }
-}
 
 
 
